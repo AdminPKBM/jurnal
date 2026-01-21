@@ -1,4 +1,5 @@
 Perbandingan strategis antara **Emas (Logam Mulia)**, **Deposito Bank**, dan **Saham Blue Chip** untuk periode 5 tahun (2026–2031).
+<img src="https://images.pexels.com/photos/102152/pexels-photo-102152.jpeg" alt="Perbandingan Investasi 5 Tahun: Emas vs Deposito vs Saham" width="100%" />
 
 Perbandingan ini akan membantu Anda melihat instrumen mana yang paling sesuai dengan profil risiko dan tujuan keuangan Anda.
 
