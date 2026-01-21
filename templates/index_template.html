@@ -3,86 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jurnal Kang Ruli | Eksplorasi Strategi & Teknologi Digital</title>
+    <title>Jurnal Kang Ruli | Strategi Digital Modern</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
         .serif { font-family: 'Playfair Display', serif; }
+        .card-shadow { transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .card-shadow:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -12px rgba(0,0,0,0.1); }
     </style>
 </head>
-<body class="bg-white text-slate-900 overflow-x-hidden">
+<body class="text-slate-900 overflow-x-hidden">
 
-    <header class="relative bg-[#fafafa] border-b border-slate-50 pt-32 pb-24 px-6">
-        <div class="max-w-6xl mx-auto relative z-10">
-            <p class="text-amber-600 font-bold text-xs uppercase tracking-[0.4em] mb-6">The Private Journal</p>
-            <h1 class="serif text-6xl md:text-9xl font-900 tracking-tighter mb-8 leading-none text-slate-900">
-                Kang Ruli<span class="text-amber-500">.</span>
+    <header class="relative pt-40 pb-32 px-6 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="serif text-7xl md:text-[10rem] font-900 tracking-tighter mb-8 leading-none animate-pulse">
+                Jurnal<span class="text-amber-500">.</span>
             </h1>
-            <p class="text-slate-500 text-lg md:text-xl max-w-2xl font-medium leading-relaxed">
-                Eksplorasi strategi digital dan panduan teknis yang ditulis secara mendalam untuk audiens modern.
-            </p>
+            <p class="text-slate-400 text-sm md:text-base font-bold uppercase tracking-[0.5em] mb-12">Insight • Strategy • Technology</p>
+            <div class="h-1 w-24 bg-amber-500 mx-auto"></div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-24">
-        <div class="flex items-center space-x-4 mb-16">
-            <h2 class="serif text-3xl">Latest Entries</h2>
-            <div class="h-[1px] flex-grow bg-slate-100"></div>
-        </div>
-
-        <div class="grid gap-24">
+    <main class="max-w-6xl mx-auto px-6 -mt-16 relative z-10">
+        <div class="grid gap-12 md:grid-cols-2">
             {% for post in posts %}
-            <article class="group flex flex-col md:flex-row gap-12 items-baseline">
-                <div class="hidden md:block">
-                    <span class="text-slate-200 serif italic text-5xl group-hover:text-amber-500 transition-colors duration-500">0{{ loop.index }}</span>
-                </div>
-                <div class="space-y-5">
-                    <h3 class="serif text-3xl md:text-5xl font-700 text-slate-900 group-hover:text-slate-600 transition-all">
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </h3>
-                    <p class="text-slate-500 text-lg md:text-xl leading-relaxed max-w-3xl">
-                        Simak ulasan lengkap mengenai {{ post.title }} dalam terbitan jurnal kali ini. Dirancang untuk memberikan solusi praktis dan insight berharga.
+            <article class="bg-white p-10 rounded-[2.5rem] border border-slate-100 card-shadow flex flex-col justify-between">
+                <div>
+                    <div class="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                        Digital Edition
+                    </div>
+                    <h2 class="serif text-3xl md:text-4xl font-700 mb-6 leading-tight group">
+                        <a href="{{ post.url }}" class="group-hover:text-amber-600 transition-colors">{{ post.title }}</a>
+                    </h2>
+                    <p class="text-slate-500 leading-relaxed mb-8">
+                        Eksplorasi mendalam mengenai {{ post.title }} dalam perspektif industri digital masa kini...
                     </p>
-                    <a href="{{ post.url }}" class="inline-flex items-center text-xs font-bold tracking-[0.2em] uppercase text-amber-600 border-b-2 border-amber-500/20 pb-2 hover:border-amber-500 transition-all">
-                        Read Investigation
-                    </a>
                 </div>
+                <a href="{{ post.url }}" class="flex items-center gap-3 font-800 text-xs uppercase tracking-widest group">
+                    View Full Article 
+                    <span class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white transition-all">→</span>
+                </a>
             </article>
             {% endfor %}
         </div>
     </main>
 
-    <footer class="bg-slate-950 text-white pt-24 pb-12 px-6">
-        <div class="max-w-6xl mx-auto text-center md:text-left">
-            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
-                <div class="max-w-xs text-left">
-                    <h4 class="serif text-2xl mb-6 italic">Jurnal Kang Ruli<span class="text-amber-500">.</span></h4>
-                    <p class="text-slate-500 text-xs leading-relaxed tracking-wide font-medium uppercase">
-                        Berbagi pengalaman di industri digital sejak dekade terakhir.
-                    </p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-12 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500 text-left">
-                    <div class="flex flex-col space-y-4">
-                        <a href="about.html" class="hover:text-white transition-colors">About</a>
-                        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
-                        <a href="sitemap.xml" class="hover:text-white transition-colors">Sitemap</a>
-                    </div>
-                    <div class="flex flex-col space-y-4">
-                        <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy</a>
-                        <a href="terms-of-service.html" class="hover:text-white transition-colors">Terms</a>
-                        <a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a>
-                    </div>
-                </div>
+    <footer class="bg-slate-950 text-white mt-32 py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="serif text-3xl mb-8 italic">Stay Ahead of the Curve.</h3>
+            <div class="flex flex-wrap justify-center gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500 mb-16">
+                <a href="privacy-policy.html" class="hover:text-amber-500 transition-colors">Privacy</a>
+                <a href="terms-of-service.html" class="hover:text-amber-500 transition-colors">Terms</a>
+                <a href="disclaimer.html" class="hover:text-amber-500 transition-colors">Disclaimer</a>
+                <a href="about.html" class="hover:text-amber-500 transition-colors">About</a>
+                <a href="contact.html" class="hover:text-amber-500 transition-colors">Contact</a>
             </div>
-            <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-slate-600 text-[10px] tracking-[0.2em] uppercase">
-                <p>&copy; 2026 JURNAL.KANGRULI.WEB.ID</p>
-                <div class="flex items-center gap-3 mt-4 md:mt-0 italic serif normal-case tracking-normal">
-                    <span>Quality over Quantity</span>
-                </div>
-            </div>
+            <p class="text-slate-700 text-[10px] tracking-[0.5em]">&copy; 2026 JURNAL.KANGRULI.WEB.ID</p>
         </div>
     </footer>
-
 </body>
 </html>
