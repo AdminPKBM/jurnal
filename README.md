@@ -1,0 +1,2 @@
+# jurnal
+jurnal kang ruli
