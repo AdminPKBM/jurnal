@@ -3,20 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Saya</title>
+    <title>Blog Kang Ruli</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 p-10">
-    <div class="max-w-2xl mx-auto">
-        <h1 class="text-5xl font-black mb-10 text-center text-gray-800">My Awesome Blog</h1>
-        <div class="space-y-4">
-            {% for post in posts %}
-            <a href="{{ post.url }}" class="block p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-                <h2 class="text-xl font-bold text-blue-500">{{ post.title }}</h2>
-                <p class="text-gray-500 text-sm">Klik untuk membaca lebih lanjut</p>
-            </a>
-            {% endfor %}
-        </div>
+<body class="bg-gray-50 text-gray-900">
+    <div class="max-w-3xl mx-auto py-20 px-6">
+        <header class="mb-16 text-center">
+            <h1 class="text-4xl font-black text-gray-900 mb-4">Kang Ruli Blog</h1>
+            <p class="text-gray-600">Berbagi pengalaman, tips praktis, dan insight seputar dunia digital.</p>
+        </header>
+
+        <main class="space-y-8">
+            <h2 class="text-xl font-bold border-b-2 border-blue-600 inline-block mb-4">Artikel Terbaru</h2>
+            
+            <div class="grid gap-6">
+                {% for post in posts %}
+                <a href="{{ post.url }}" class="group block p-6 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                    <h3 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                        {{ post.title }}
+                    </h3>
+                    <p class="text-gray-500 mt-2 text-sm leading-relaxed">
+                        Klik untuk membaca panduan lengkap mengenai {{ post.title }}...
+                    </p>
+                    <div class="mt-4 text-blue-500 font-semibold text-sm flex items-center">
+                        Baca Selengkapnya <span class="ml-1 group-hover:ml-2 transition-all">→</span>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </main>
+
+        <footer class="mt-20 pt-8 border-t text-center text-gray-400 text-sm">
+            &copy; 2026 kangruli.web.id
+        </footer>
     </div>
 </body>
 </html>
