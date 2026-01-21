@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{{ title }} - kangruli.web.id</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <style>
+        /* Styling tambahan untuk format khusus Kang Ruli */
+        .prose hr { border-top: 2px solid #e5e7eb; margin: 2.5rem 0; }
+        .prose blockquote { 
+            border-left-color: #2563eb; 
+            background-color: #eff6ff; 
+            padding: 1.5rem; 
+            border-radius: 0 0.5rem 0.5rem 0;
+            font-style: normal;
+        }
+        .prose blockquote p::before, .prose blockquote p::after { content: ""; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 line-height-relaxed">
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
     <nav class="p-6 bg-white shadow-sm mb-10">
-        <div class="max-w-3xl mx-auto"><a href="index.html" class="font-bold text-blue-600">← Kembali ke Beranda</a></div>
+        <div class="max-w-3xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-bold text-blue-600 hover:text-blue-800 transition">← Kembali ke Beranda</a>
+            <span class="text-sm text-gray-400">kangruli.web.id</span>
+        </div>
     </nav>
-    <article class="max-w-3xl mx-auto bg-white p-8 shadow-md rounded-lg">
-        <h1 class="text-4xl font-extrabold mb-6">{{ title }}</h1>
-        <div class="prose lg:prose-xl">
+
+    <article class="max-w-3xl mx-auto bg-white p-6 md:p-12 shadow-sm border border-gray-100 rounded-xl mb-20">
+        <header class="mb-10 border-b pb-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                {{ title }}
+            </h1>
+        </header>
+
+        <div class="prose prose-blue lg:prose-lg max-w-none">
             {{ content }}
         </div>
     </article>
+
+    <footer class="text-center pb-10 text-gray-500 text-sm">
+        &copy; 2024 Kang Ruli Blog. Built with GitHub Actions.
+    </footer>
 </body>
 </html>
