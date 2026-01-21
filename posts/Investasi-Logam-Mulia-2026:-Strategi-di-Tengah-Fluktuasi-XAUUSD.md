@@ -6,6 +6,8 @@ Berikut adalah draf artikel pilar komprehensif untuk panduan investasi logam mul
 
 Memasuki awal tahun 2026, **logam mulia** tetap menjadi instrumen primadona bagi investor yang mencari keamanan (*safe haven*). Dengan dinamika **gold price** dan pergerakan pasangan mata uang **XAUUSD** yang dipengaruhi kebijakan ekonomi global pasca-pemulihan besar-besaran tahun sebelumnya, pemahaman mendalam sangat diperlukan untuk menjaga nilai aset Anda.
 
+<img src="https://images.pexels.com/photos/342942/pexels-photo-342942.jpeg" alt="Investasi Logam Mulia 2026" width="100%" />
+
 ---
 
 ## Memahami Lanskap Ekonomi Logam Mulia 2026
