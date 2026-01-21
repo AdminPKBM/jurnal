@@ -3,43 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - kangruli.web.id</title>
+    <title>{{ title }} | Jurnal Kang Ruli</title>
+    <meta name="description" content="Baca artikel mengenai {{ title }} di jurnal.kangruli.web.id. Panduan praktis, opini, dan solusi cerdas.">
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* Styling tambahan untuk format khusus Kang Ruli */
-        .prose hr { border-top: 2px solid #e5e7eb; margin: 2.5rem 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .prose hr { border-top: 2px solid #f3f4f6; margin: 3rem 0; }
         .prose blockquote { 
-            border-left-color: #2563eb; 
-            background-color: #eff6ff; 
-            padding: 1.5rem; 
-            border-radius: 0 0.5rem 0.5rem 0;
-            font-style: normal;
+            border-left: 4px solid #2563eb; 
+            background: #f8fafc; 
+            font-style: normal; 
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem;
         }
-        .prose blockquote p::before, .prose blockquote p::after { content: ""; }
+        .prose pre { background: #1e293b; border-radius: 12px; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 leading-relaxed">
-    <nav class="p-6 bg-white shadow-sm mb-10">
-        <div class="max-w-3xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="font-bold text-blue-600 hover:text-blue-800 transition">← Kembali ke Beranda</a>
-            <span class="text-sm text-gray-400">kangruli.web.id</span>
+<body class="bg-[#fafafa] text-slate-900 overflow-x-hidden">
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-800 tracking-tighter text-blue-600">JURNAL<span class="text-slate-400">KANGRULI</span></a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-blue-600">Beranda</a>
+                <a href="#" class="hover:text-blue-600">Tentang</a>
+            </div>
         </div>
     </nav>
 
-    <article class="max-w-3xl mx-auto bg-white p-6 md:p-12 shadow-sm border border-gray-100 rounded-xl mb-20">
-        <header class="mb-10 border-b pb-8">
-            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+    <main class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+        <header class="mb-12">
+            <h1 class="text-3xl md:text-5xl font-800 text-slate-900 tracking-tight leading-tight mb-6">
                 {{ title }}
             </h1>
+            <div class="flex items-center space-x-4 text-slate-500 text-sm">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-bold text-xs uppercase">Edukasi</span>
+                <span>Admin Kang Ruli</span>
+            </div>
         </header>
 
-        <div class="prose prose-blue lg:prose-lg max-w-none">
-            {{ content }}
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100">
+            <article class="prose prose-slate prose-lg max-w-none prose-headings:font-800 prose-headings:tracking-tight prose-a:text-blue-600 prose-img:rounded-2xl">
+                {{ content }}
+            </article>
         </div>
-    </article>
 
-    <footer class="text-center pb-10 text-gray-500 text-sm">
-        &copy; 2024 Kang Ruli Blog. Built with GitHub Actions.
+        <div class="mt-12 p-8 bg-slate-900 rounded-3xl text-white flex flex-col md:flex-row items-center gap-6">
+            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold">KR</div>
+            <div>
+                <p class="font-bold text-lg">Kang Ruli</p>
+                <p class="text-slate-400 text-sm">Praktisi digital yang hobi berbagi insight di jurnal.kangruli.web.id. Fokus pada efisiensi dan teknologi tepat guna.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-slate-200 text-center text-slate-400 text-sm">
+        <p>&copy; 2026 jurnal.kangruli.web.id | Semua konten dilindungi hak cipta.</p>
     </footer>
 </body>
 </html>
